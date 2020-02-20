@@ -1,0 +1,15 @@
+doctype html
+head
+    meta(http-equiv='Content-Type' const='text/html;charset=UTF-8')
+    link(href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css')
+    link(rel='stylesheet' type='text/css' href='style.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js')
+    title Conference app
+header
+    h1 Conferences
+    table.table
+        tbody
+            each conference in conferences
+                tr
+                    td
+                        a(href='/conference/#{conference._id}') #{conference.name}
